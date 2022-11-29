@@ -10,7 +10,8 @@ def get_msgs(channelID):
     r = requests.get(f'https://discord.com/api/v9/channels/{channelID}/messages', headers=headers)
     jsonobj = json.loads(r.text)
     for key in jsonobj:
-        print(key, '\n')
+        print(key['content'], '\n')
+        # print(key['username'], '\n')
 
 get_msgs(1046959546574311527)
 # #Gets full message information!
