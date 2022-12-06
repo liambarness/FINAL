@@ -6,14 +6,14 @@ import discord
 #Scraping Messages
 def get_msgs(channelID):
     #Discord Auth code for test account
-    headers = { 'authorization': 'MTA0Njk1ODgzMjY0MDg1MjAyOQ.Gk01lg.8dOUWq2l4zSPqvJa31rEL17cC67mCKHntmWNw4' }
+    headers = { 'authorization': 'MjAzNTMxMDI2NzAwNDM1NDU2.GQlTuX.WwrXcpk-vhrIMl132EK3oSp9gYUW3shxDdYK1I' }
     r = requests.get(f'https://discord.com/api/v9/channels/{channelID}/messages', headers=headers)
     jsonobj = json.loads(r.text)
     for key in jsonobj:
         print(key['content'], '\n')
         # print(key['username'], '\n')
 
-get_msgs(1046959546574311527)
+get_msgs(1049502790386462732)
 # #Gets full message information!
 # {'id': '1046961031529902152', 'type': 0, 'content': 'e', 'channel_id': '1046959546574311527', 'author': {'id': '1046958832640852029', 'username': 'liamtestingaccount', 'avatar': 
 # None, 'avatar_decoration': None, 'discriminator': '1139', 'public_flags': 0}, 'attachments': [], 'embeds': [], 'mentions': [], 'mention_roles': [], 'pinned': False, 'mention_everyone': False, 'tts': False, 'timestamp': '2022-11-29T01:29:21.512000+00:00', 'edited_timestamp': None, 'flags': 0, 'components': []} 
